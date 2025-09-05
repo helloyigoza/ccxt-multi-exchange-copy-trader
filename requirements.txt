@@ -1,0 +1,34 @@
+# Core Dependencies
+ccxt>=4.0.0
+ccxt-async>=4.0.0
+
+# Development and Testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.0.0
+black>=22.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+isort>=5.10.0
+
+# Logging and Monitoring
+rich>=13.0.0
+loguru>=0.6.0
+
+# Configuration and Serialization
+pyyaml>=6.0
+pydantic>=1.10.0
+
+# Async and Networking
+aiohttp>=3.8.0
+httpx>=0.24.0
+
+# Data Processing
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Environment Management
+python-dotenv>=1.0.0
+
+# Type Hints (for older Python versions)
+typing-extensions>=4.0.0; python_version < "3.9"

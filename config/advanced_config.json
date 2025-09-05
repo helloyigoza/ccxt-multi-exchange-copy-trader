@@ -1,0 +1,70 @@
+{
+  "_comment": "Gelişmiş konfigürasyon örneği - tüm özellikleri içerir",
+
+  "exchanges": {
+    "binance": {
+      "name": "Binance",
+      "supported_products": ["spot", "futures", "margin"],
+      "default_fees": {
+        "maker": 0.001,
+        "taker": 0.001
+      },
+      "rate_limits": {
+        "requests_per_second": 10,
+        "orders_per_second": 10
+      }
+    }
+  },
+
+  "risk_management": {
+    "global_max_leverage": 50,
+    "max_position_size_percent": 10,
+    "min_account_balance_usdt": 10,
+    "max_daily_loss_percent": 5,
+    "emergency_stop_loss": 15,
+    "blacklisted_symbols": ["BTC/USDT", "ETH/USDT"],
+    "whitelisted_symbols": []
+  },
+
+  "trading_rules": {
+    "min_order_size_usdt": 5,
+    "max_slippage_percent": 0.5,
+    "price_tolerance_percent": 0.1,
+    "enable_partial_fills": true,
+    "reduce_only_protection": true
+  },
+
+  "notification_settings": {
+    "telegram": {
+      "enabled": false,
+      "bot_token": "YOUR_TELEGRAM_BOT_TOKEN",
+      "chat_id": "YOUR_CHAT_ID",
+      "notify_on_trade": true,
+      "notify_on_error": true
+    },
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "username": "your_email@gmail.com",
+      "password": "your_app_password",
+      "recipients": ["admin@example.com"]
+    }
+  },
+
+  "monitoring": {
+    "enable_metrics": true,
+    "metrics_port": 9090,
+    "log_to_file": true,
+    "log_rotation": "daily",
+    "performance_tracking": true
+  },
+
+  "backtesting": {
+    "enabled": false,
+    "historical_data_path": "data/historical",
+    "start_date": "2023-01-01",
+    "end_date": "2024-01-01",
+    "initial_balance": 10000
+  }
+}

@@ -1,0 +1,19 @@
+-r requirements.txt
+
+# Development Tools
+pre-commit>=3.0.0
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.2.0
+myst-parser>=0.18.0
+
+# Performance Profiling
+memory-profiler>=0.61.0
+line-profiler>=4.0.0
+
+# Security
+bandit>=1.7.0
+safety>=2.3.0

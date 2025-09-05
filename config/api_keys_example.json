@@ -1,0 +1,55 @@
+{
+  "_comment": "Bu dosya örnek konfigürasyon içindir. Gerçek API anahtarlarınızı kullanmak için bu dosyayı kopyalayıp api_keys.json olarak yeniden adlandırın.",
+  "_warning": "API anahtarlarınızı asla Git'e commit etmeyin! Bu dosya .gitignore'da hariç tutulmuştur.",
+
+  "leader": {
+    "user_id": "leader_trader",
+    "exchange_id": "binance",
+    "api_key": "YOUR_LEADER_API_KEY_HERE",
+    "api_secret": "YOUR_LEADER_API_SECRET_HERE",
+    "copy_trade_enabled": false,
+    "description": "Lider trader - işlemleri kopyalanacak hesap"
+  },
+
+  "followers": [
+    {
+      "user_id": "follower_1",
+      "exchange_id": "binance",
+      "api_key": "YOUR_FOLLOWER1_API_KEY_HERE",
+      "api_secret": "YOUR_FOLLOWER1_API_SECRET_HERE",
+      "copy_trade_enabled": true,
+      "risk_multiplier": 0.5,
+      "max_leverage": 10,
+      "description": "Konservatif takipçi - liderin yarısı risk"
+    },
+    {
+      "user_id": "follower_2",
+      "exchange_id": "binance",
+      "api_key": "YOUR_FOLLOWER2_API_KEY_HERE",
+      "api_secret": "YOUR_FOLLOWER2_API_SECRET_HERE",
+      "copy_trade_enabled": true,
+      "risk_multiplier": 1.0,
+      "max_leverage": 20,
+      "description": "Standart takipçi - liderle aynı risk"
+    },
+    {
+      "user_id": "follower_3",
+      "exchange_id": "binance",
+      "api_key": "YOUR_FOLLOWER3_API_KEY_HERE",
+      "api_secret": "YOUR_FOLLOWER3_API_SECRET_HERE",
+      "copy_trade_enabled": true,
+      "risk_multiplier": 0.25,
+      "max_leverage": 5,
+      "description": "Çok konservatif takipçi - liderin çeyreği risk"
+    }
+  ],
+
+  "settings": {
+    "default_exchange": "binance",
+    "max_retry_attempts": 3,
+    "retry_delay_seconds": 1.0,
+    "log_level": "INFO",
+    "enable_position_sync": true,
+    "sync_interval_minutes": 5
+  }
+}

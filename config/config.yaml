@@ -1,0 +1,86 @@
+# CCXT Multi-Exchange Copy Trading System Configuration
+# YAML format example
+
+# Global settings
+settings:
+  log_level: INFO
+  max_retry_attempts: 3
+  retry_delay_seconds: 1.0
+  enable_position_sync: true
+  sync_interval_minutes: 5
+  timezone: UTC
+
+# Database configuration (optional)
+database:
+  enabled: false
+  type: sqlite
+  path: data/trading.db
+
+# Redis configuration for distributed setup (optional)
+redis:
+  enabled: false
+  host: localhost
+  port: 6379
+  password: null
+  db: 0
+
+# Leader configuration
+leader:
+  user_id: "leader_trader"
+  exchange_id: "binance"
+  api_key: "YOUR_LEADER_API_KEY"
+  api_secret: "YOUR_LEADER_API_SECRET"
+  copy_trade_enabled: false
+  description: "Main trading account"
+
+# Followers configuration
+followers:
+  - user_id: "follower_conservative"
+    exchange_id: "binance"
+    api_key: "YOUR_FOLLOWER_API_KEY_1"
+    api_secret: "YOUR_FOLLOWER_API_SECRET_1"
+    copy_trade_enabled: true
+    risk_multiplier: 0.5
+    max_leverage: 10
+    description: "Conservative follower"
+
+  - user_id: "follower_aggressive"
+    exchange_id: "binance"
+    api_key: "YOUR_FOLLOWER_API_KEY_2"
+    api_secret: "YOUR_FOLLOWER_API_SECRET_2"
+    copy_trade_enabled: true
+    risk_multiplier: 1.5
+    max_leverage: 25
+    description: "Aggressive follower"
+
+# Exchange specific settings
+exchanges:
+  binance:
+    testnet: false
+    default_leverage: 10
+    supported_symbols:
+      - "BTC/USDT"
+      - "ETH/USDT"
+      - "BNB/USDT"
+
+# Risk management
+risk:
+  max_daily_trades: 100
+  max_open_positions: 5
+  max_position_size_percent: 20
+  emergency_stop_enabled: true
+  stop_loss_percent: 10
+
+# Notification settings
+notifications:
+  enabled: false
+  telegram:
+    bot_token: "YOUR_BOT_TOKEN"
+    chat_ids:
+      - "YOUR_CHAT_ID"
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    username: "your_email@gmail.com"
+    password: "your_app_password"
