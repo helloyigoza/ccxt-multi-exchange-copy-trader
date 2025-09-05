@@ -18,7 +18,7 @@ def read_requirements(filename):
 setup(
     name="ccxt-multi-exchange-copy-trader",
     version="1.0.0",
-    author="Yiğit Özaksüt",
+    author="yigoza",
     author_email="yigit.ozaksut@example.com",
     description="Multi-exchange copy trading system using CCXT library",
     long_description=long_description,

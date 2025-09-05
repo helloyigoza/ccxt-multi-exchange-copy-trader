@@ -301,6 +301,6 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 ---
 
-**Author / Yazar**: [Yiğit Özaksüt](https://github.com/yigoza)
+**Author / Yazar**: [yigoza](https://github.com/yigoza)
 **License / Lisans**: MIT
 **Version / Versiyon**: 1.0.0
